@@ -6,7 +6,6 @@ body {
   background-color: #fff;
   background-image: url("../images/full_bg.png");
   background-repeat: repeat-y;
-  // background-size: cover;
 }
 
 main {
@@ -31,6 +30,9 @@ main {
     background-image: url("../images/top_left_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    animation: float 6s ease-in-out infinite;
+    // sway 4s ease-in-out infinite;
   }
 
   &::after {
@@ -45,6 +47,33 @@ main {
     background-image: url("../images/top_right_icon.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    animation: float 6s ease-in-out infinite;
+    // sway 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Підйом на 10px */
+    }
+  }
+
+  /* Анімація для руху в сторони */
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-2px) rotate(-0.5deg); /* Зміщення вліво з нахилом */
+    }
+    75% {
+      transform: translateX(2px) rotate(0.5deg); /* Зміщення вправо з нахилом */
+    }
   }
 
   & .container {
@@ -61,6 +90,9 @@ main {
       background-image: url("../images/top_left_2_icon.png");
       background-repeat: no-repeat;
       background-size: contain;
+
+      animation: float 6s ease-in-out infinite;
+      // sway 4s ease-in-out infinite;
     }
     & .title {
       position: relative;
@@ -810,6 +842,8 @@ main {
           display: flex;
           align-items: center;
           justify-content: center;
+
+          overflow: hidden;
 
           margin: 0 auto 12px;
 
