@@ -308,7 +308,7 @@
               <h5>Блок 1.</h5>
               <p>Що таке тілесна психотерапія.<br />Чим вона допоможе?</p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Познайомитеся з тілесною терапією та дізнаєтеся, чим вона корисна.</p>
               </div>
@@ -318,7 +318,7 @@
               <h5>Блок 2.</h5>
               <p>Техніки та практики для знайомства з собою та своїм тілом.</p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Дізнаєтесь, як можете вже почати відслідковувати свої стани у: особистих стосунках, здоров'ї, роботі
                   та при взаємодії з іншими людьми. Навчитеся помічати та краще розуміти своє тіло.
@@ -331,7 +331,7 @@
               <p>Як насправді я відношусь до свого тіла.
               </p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Пізнаєте всі процеси, які підсвідомо керують вами по відношенню до свого тіла. За допомогою
                   метафоричних асоціативних карток, пізнаєте себе ще глибше.</p>
@@ -342,7 +342,7 @@
               <h5>Блок 4.</h5>
               <p>Як починати свій день.</p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Візьмете в свій ранок ефективні практики, які дозволять залишатись продуктивним та повним сил і
                   енергії!
@@ -354,7 +354,7 @@
               <h5>Блок 5.</h5>
               <p>Робота з емоціями. Вивільнення негативного стану через тіло.</p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Навчитеся розпізнавати свої емоції та будете знати як впливати на ваші думки, емоції та поведінку.
                 </p>
@@ -366,7 +366,7 @@
               <p>Практики роботи з тривогою. Як тривога відображається у нашому тілі. Що з цим робити.
               </p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Опануєте техніки з розслаблення та релаксації під час тривожних проявів.</p>
               </div>
@@ -376,7 +376,7 @@
               <h5>Блок 7.</h5>
               <p>Практика вдячності та наповнення любов’ю всередині себе. </p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Помітите позитивні моменти кожного вашого дня. А також дізнаєтесь, як бути вдячним собі та своєму
                   тілу.</p>
@@ -387,7 +387,7 @@
               <h5>Блок 8.</h5>
               <p>Завершення проекту</p>
 
-              <div class="result">
+              <div data-aos="flip-up" class="result">
                 <h5>Результат:</h5>
                 <p>Візьмете із собою величезну дозу мотивації та настанови, які допоможуть впровадити практики у ваше
                   життя на постійній основі</p>
@@ -556,6 +556,33 @@
         }
       })
     })
+  </script>
+
+  <script>
+    $(window).on('scroll', function () {
+      var $aboutCourses = $('.about_courses')
+      var scrollTop = $(window).scrollTop()
+      var aboutCoursesOffsetTop = $aboutCourses.offset().top
+      var aboutCoursesHeight = $aboutCourses.outerHeight()
+      var beforeHeight = 146
+
+      if (scrollTop >= aboutCoursesOffsetTop - 55) {
+        $aboutCourses.addClass('fixed')
+
+        var newTop = scrollTop - aboutCoursesOffsetTop + 56
+        $aboutCourses.css('--top', newTop + 'px')
+
+        if (scrollTop >= (aboutCoursesOffsetTop + aboutCoursesHeight - beforeHeight)) {
+          $aboutCourses.removeClass('fixed')
+          $aboutCourses.css('--top', aboutCoursesHeight - beforeHeight + 'px')
+
+        }
+      } else {
+        $aboutCourses.removeClass('fixed')
+        $aboutCourses.css('--top', '')
+      }
+    });
+
   </script>
 
   <script>

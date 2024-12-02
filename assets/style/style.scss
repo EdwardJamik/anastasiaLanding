@@ -906,7 +906,14 @@ main {
     background-image: url(../images/about_left_img.png);
     background-size: cover;
     background-repeat: no-repeat;
-    top: -55px;
+    top: var(--top, -55px);
+  }
+
+  &.fixed::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
   }
 
   &::after {
