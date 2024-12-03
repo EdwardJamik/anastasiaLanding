@@ -437,7 +437,7 @@
             <b>@sport.house_sho</b>
           </p>
 
-          <img src="./assets/images/bonus_img.png" alt="Bonus image">
+          <img src="./assets/images/bonus_img.png" alt="Bonus image" class="bonus-img">
         </div>
       </div>
     </section>
@@ -556,6 +556,24 @@
         }
       })
     })
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bonusImg = document.querySelector('.bonus-img')
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            bonusImg.classList.add('visible') // Додати клас для анімації
+          }
+        })
+      }, {
+        threshold: 0.8 // Елемент повинен бути на 50% у полі видимості
+      })
+
+      observer.observe(bonusImg)
+    });
   </script>
 
   <script>
