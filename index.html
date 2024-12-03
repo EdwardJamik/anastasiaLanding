@@ -500,7 +500,7 @@
     <section>
       <div class="have_question">
         <div class="container">
-          <h2>Залишились питання?</h2>
+          <h2>Залишились питання<span>?</span></h2>
 
           <div class="question_img">
             <img src="./assets/images/question.png" alt="Question image">
@@ -567,15 +567,17 @@
       var beforeHeight = 146
 
       if (scrollTop >= aboutCoursesOffsetTop - 55) {
-        $aboutCourses.addClass('fixed')
+        var newTop = (scrollTop - 55) - aboutCoursesOffsetTop + 56
+        if (newTop <= 110) {
+          $aboutCourses.addClass('fixed')
 
-        var newTop = scrollTop - aboutCoursesOffsetTop + 56
-        $aboutCourses.css('--top', newTop + 'px')
+          $aboutCourses.css('--top', newTop + 'px')
 
-        if (scrollTop >= (aboutCoursesOffsetTop + aboutCoursesHeight - beforeHeight)) {
+          if (scrollTop >= (aboutCoursesOffsetTop + aboutCoursesHeight - beforeHeight)) {
+            $aboutCourses.removeClass('fixed')
+          }
+        } else {
           $aboutCourses.removeClass('fixed')
-          $aboutCourses.css('--top', aboutCoursesHeight - beforeHeight + 'px')
-
         }
       } else {
         $aboutCourses.removeClass('fixed')

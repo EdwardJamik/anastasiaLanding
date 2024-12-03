@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @font-face {
   font-family: "Mak";
@@ -197,9 +196,6 @@ main {
   padding: 0 16px;
 }
 
-.top {
-  /* Анімація для руху в сторони */
-}
 .top::before {
   content: " ";
   position: absolute;
@@ -223,25 +219,6 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   animation: float 6s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Підйом на 10px */
-  }
-}
-@keyframes sway {
-  0%, 100% {
-    transform: translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateX(-2px) rotate(-0.5deg); /* Зміщення вліво з нахилом */
-  }
-  75% {
-    transform: translateX(2px) rotate(0.5deg); /* Зміщення вправо з нахилом */
-  }
 }
 .top .container {
   padding-top: 44px;
@@ -1485,6 +1462,18 @@ main {
           text-decoration-skip-ink: none;
   color: #ed5242;
 }
+.have_question .container h2 > span {
+  font-family: Mak;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #ed5242;
+  animation: sway 1s infinite;
+}
 .have_question .container .question_img {
   margin-top: 24px;
   border: 1px dotted #d3d3d3;
@@ -1570,4 +1559,24 @@ main {
 h2 {
   max-width: 320px;
   margin: 0 auto;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes sway {
+  0%, 100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -32,7 +32,6 @@ main {
     background-size: contain;
 
     animation: float 6s ease-in-out infinite;
-    // sway 4s ease-in-out infinite;
   }
 
   &::after {
@@ -49,31 +48,6 @@ main {
     background-size: contain;
 
     animation: float 6s ease-in-out infinite;
-    // sway 4s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px); /* Підйом на 10px */
-    }
-  }
-
-  /* Анімація для руху в сторони */
-  @keyframes sway {
-    0%,
-    100% {
-      transform: translateX(0) rotate(0deg);
-    }
-    25% {
-      transform: translateX(-2px) rotate(-0.5deg); /* Зміщення вліво з нахилом */
-    }
-    75% {
-      transform: translateX(2px) rotate(0.5deg); /* Зміщення вправо з нахилом */
-    }
   }
 
   & .container {
@@ -1437,6 +1411,18 @@ main {
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       color: #ed5242;
+
+      & > span {
+        font-family: Mak;
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 48px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ed5242;
+        animation: sway 1s infinite;
+      }
     }
 
     & .question_img {
@@ -1534,4 +1520,27 @@ main {
 h2 {
   max-width: 320px;
   margin: 0 auto;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
 }
