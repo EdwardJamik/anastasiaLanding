@@ -124,7 +124,7 @@
                   </div>
                   <p>Ви піклуєтесь про своє здоров'я</p>
                 </div>
-                <div data-aos="zoom-out-up" class="result">
+                <div data-aos="flip-up" class="result">
                   <h5>Результат:</h5>
 
                   <ul>
@@ -142,7 +142,7 @@
                   </div>
                   <p>Ви турбуєтесь про майбутнє</p>
                 </div>
-                <div data-aos="zoom-out-up" class="result">
+                <div data-aos="flip-up" class="result">
                   <h5>Результат:</h5>
 
                   <ul>
@@ -159,7 +159,7 @@
                   </div>
                   <p>Тривога заважає вам жити повноцінно</p>
                 </div>
-                <div data-aos="zoom-out-up" class="result">
+                <div data-aos="flip-up" class="result">
                   <h5>Результат:</h5>
 
                   <ul>
@@ -177,7 +177,7 @@
                   </div>
                   <p>Ви шукаєте внутрішню гармонію</p>
                 </div>
-                <div data-aos="zoom-out-up" class="result">
+                <div data-aos="flip-up" class="result">
                   <h5>Результат:</h5>
 
                   <ul>
@@ -565,11 +565,11 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            bonusImg.classList.add('visible') // Додати клас для анімації
+            bonusImg.classList.add('visible')
           }
         })
       }, {
-        threshold: 0.8 // Елемент повинен бути на 50% у полі видимості
+        threshold: 0.8
       })
 
       observer.observe(bonusImg)
