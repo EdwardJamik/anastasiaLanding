@@ -22,6 +22,7 @@ main {
   & .top {
     position: relative;
     height: 100dvh;
+    max-height: 670px;
     &::before {
       content: " ";
       position: absolute;
