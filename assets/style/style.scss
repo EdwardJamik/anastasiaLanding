@@ -455,10 +455,11 @@ main {
     }
 
     & img {
-      margin-top: 32px;
       max-height: 480px;
       height: 100%;
       width: 100%;
+      max-width: 358px;
+      margin: 32px auto 0;
     }
   }
 }
@@ -635,7 +636,7 @@ main {
     }
 
     & img {
-      margin: 16px 0;
+      margin: 16px auto;
     }
   }
 }

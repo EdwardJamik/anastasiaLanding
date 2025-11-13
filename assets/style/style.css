@@ -593,10 +593,11 @@ main {
   font-weight: 700;
 }
 .about_course .container img {
-  margin-top: 32px;
   max-height: 480px;
   height: 100%;
   width: 100%;
+  max-width: 358px;
+  margin: 32px auto 0;
 }
 
 .for {
@@ -752,7 +753,7 @@ main {
   font-weight: 700;
 }
 .about_courses .container img {
-  margin: 16px 0;
+  margin: 16px auto;
 }
 
 .cost_training {
