@@ -637,6 +637,8 @@ main {
 
     & img {
       margin: 16px auto;
+      max-width: 300px;
+      width: 100%;
     }
   }
 }
@@ -961,7 +963,7 @@ main {
         margin-bottom: 32px;
         & li {
           position: relative;
-          padding: 36px 0 0 16px;
+          // padding: 36px 0 0 16px;
 
           & > p {
             font-family: "Manrope";
@@ -1006,36 +1008,11 @@ main {
 
           &:first-child {
             & .slider {
+              padding: 36px 0 0 16px;
               & .slide_list {
                 &:nth-child(1) {
-                  & div {
-                    &:nth-child(1) {
-                      & img {
-                        max-width: 236px;
-                        height: 240px;
-                      }
-                    }
-
-                    &:nth-child(2) {
-                      & img {
-                        max-width: 220px;
-                        height: 240px;
-                      }
-                    }
-
-                    &:nth-child(3) {
-                      & img {
-                        max-width: 180px;
-                        height: 240px;
-                      }
-                    }
-
-                    &:nth-child(4) {
-                      & img {
-                        max-width: 210px;
-                        height: 240px;
-                      }
-                    }
+                  & img {
+                    border-radius: 8px;
                   }
                 }
               }
