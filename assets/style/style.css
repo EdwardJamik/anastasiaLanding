@@ -1095,6 +1095,15 @@ main {
   align-items: self-start;
   gap: 8px;
 }
+.reviews .container .content ul li .slider .slide_list img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  will-change: transform;
+  -o-object-fit: contain;
+     object-fit: contain;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
 .reviews .container .content ul li .slider .slide_list .slick-slide {
   margin-right: 8px;
 }

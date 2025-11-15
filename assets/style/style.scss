@@ -1012,6 +1012,7 @@ main {
           &:first-child {
             & .slider {
               padding: 36px 0 0 16px;
+
               & .slide_list {
                 &:nth-child(1) {
                   & img {
@@ -1027,6 +1028,21 @@ main {
               display: flex;
               align-items: self-start;
               gap: 8px;
+
+              & img {
+                image-rendering: -webkit-optimize-contrast;
+                // image-rendering: crisp-edges;
+
+                // Або для більш м'якого, але чіткого відображення
+                image-rendering: auto;
+
+                will-change: transform;
+
+                object-fit: contain;
+
+                backface-visibility: hidden;
+                transform: translateZ(0);
+              }
 
               & .slick-slide {
                 margin-right: 8px;
