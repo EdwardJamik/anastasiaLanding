@@ -1090,6 +1090,9 @@ main {
 .reviews .container .content ul li:first-child .slider {
   padding: 36px 0 0 16px;
 }
+.reviews .container .content ul li:first-child .slider .slide_list:nth-child(1) img {
+  border-radius: 8px;
+}
 .reviews .container .content ul li .slider .slide_list {
   display: flex;
   align-items: self-start;
