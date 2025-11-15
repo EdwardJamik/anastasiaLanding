@@ -788,6 +788,8 @@ main {
           text-decoration-skip-ink: none;
   color: #fff;
   text-transform: uppercase;
+  max-width: 358px;
+  margin: 0 auto;
 }
 .cost_training .container .block .center {
   padding: 24px 24px 32px;
@@ -1072,7 +1074,7 @@ main {
   letter-spacing: 0;
   text-transform: uppercase;
   text-align: left;
-  margin: 24px 0 32px;
+  margin: 24px 0 32px 16px;
   max-width: 150px;
 }
 .reviews .container .content ul li .note::after {
@@ -1087,9 +1089,6 @@ main {
 }
 .reviews .container .content ul li:first-child .slider {
   padding: 36px 0 0 16px;
-}
-.reviews .container .content ul li:first-child .slider .slide_list:nth-child(1) img {
-  border-radius: 8px;
 }
 .reviews .container .content ul li .slider .slide_list {
   display: flex;
